@@ -40,7 +40,10 @@ project-root/
 ├── docs/
 │   ├── requirements/
 │   ├── design/
-│   └── testing/
+│   │   ├── diagrams/
+│   │   ├── specifications/
+│   ├── testing/ 
+│   └── grading/
 │
 ├── src/
 │   ├── main.py
