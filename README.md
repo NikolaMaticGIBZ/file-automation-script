@@ -41,7 +41,7 @@ project-root/
 │   ├── requirements/
 │   ├── design/
 │   │   ├── diagrams/
-│   │   ├── specifications/
+│   │   ├── architecture/
 │   ├── testing/ 
 │   └── grading/
 │
