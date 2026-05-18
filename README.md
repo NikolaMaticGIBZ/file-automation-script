@@ -50,7 +50,8 @@ project-root/
 │   ├── detector.py
 │   ├── parser.py
 │   ├── logger.py
-│   └── config.py
+│   ├── config.py
+│   └── mover.py
 │
 ├── tests/
 ├── input/
@@ -59,6 +60,7 @@ project-root/
 │
 ├── README.md
 ├── requirements.txt
+├── .env
 └── .gitignore
 ```
 
