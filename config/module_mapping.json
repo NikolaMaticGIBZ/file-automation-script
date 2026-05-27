@@ -1,0 +1,14 @@
+{
+    "modules": {
+        "M122": "./output/M122",
+        "M123": "./output/M123",
+        "M114": "./output/M114",
+        "M231": "./output/M231"
+    },
+
+    "subfolders": {
+        "exercise": "Exercises",
+        "theory": "Theory",
+        "code": "Code"
+    }
+}
