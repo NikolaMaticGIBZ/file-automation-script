@@ -24,7 +24,14 @@ The automation reduces repetitive manual work, improves organization, minimizes 
 * Modular Python architecture
 * Configurable project setup
 * Graphical User Interface (GUI)
+* File selection before execution
+* Select All / Deselect All controls
+* Scrollable file list
+* Live file statistics
 * Progress bar with live status updates
+* Discord webhook reporting
+* Weekly automated execution
+* Windows Task Scheduler integration
 * Custom executable (.exe) support
 
 ---
@@ -37,8 +44,11 @@ The automation reduces repetitive manual work, improves organization, minimizes 
 * Python logging module
 * Environment variables
 * JSON configuration
+* Discord Webhooks
+* Windows Task Scheduler
 * Git & GitHub
 * python-dotenv
+* discord-webhook
 * PyInstaller
 
 ---
@@ -66,7 +76,10 @@ project-root/
 │   ├── parser.py
 │   ├── logger.py
 │   ├── config.py
-│   └── mover.py
+│   ├── mover.py
+│   ├── discord_reporter.py
+│   ├── scheduler_runner.py
+│   └── test_discord.py
 │
 ├── config/
 │   └── module_mapping.json
@@ -98,6 +111,7 @@ DOWNLOADS_PATH=./input
 LOG_PATH=./logs
 DEFAULT_UNKNOWN_PATH=./output/unknown
 MAPPING_FILE=./config/module_mapping.json
+DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
 ```
 
 ---
@@ -184,8 +198,11 @@ python src/gui.py
 
 The GUI provides:
 
-* Start sorting button
-* File processing list
+* File scanning
+* File selection via checkboxes
+* Select All / Deselect All controls
+* Live file statistics
+* Scrollable file list
 * Progress bar
 * Status updates
 * Error messages
@@ -207,6 +224,40 @@ Executable output:
 dist/
 └── M122 File Organizer.exe
 ```
+
+---
+
+# Discord Reporting
+
+The application can send automation summaries to a Discord channel using webhooks.
+
+Features:
+
+* Weekly reports
+* File processing summaries
+* Success and error notifications
+* Automated execution feedback
+
+Configuration is performed using the `DISCORD_WEBHOOK_URL` environment variable.
+
+---
+
+# Scheduled Automation
+
+The project supports fully automated execution using Windows Task Scheduler.
+
+Example configuration:
+
+* Frequency: Weekly
+* Day: Sunday
+* Time: 12:00
+
+The scheduler automatically:
+
+1. Scans the configured folder
+2. Sorts files
+3. Creates a summary report
+4. Sends the report to Discord
 
 ---
 

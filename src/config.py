@@ -32,7 +32,9 @@ DOWNLOADS_PATH = os.getenv("DOWNLOADS_PATH")
 LOG_PATH = os.getenv("LOG_PATH")
 DEFAULT_UNKNOWN_PATH = os.getenv("DEFAULT_UNKNOWN_PATH")
 MAPPING_FILE = os.getenv("MAPPING_FILE")
-
+DISCORD_WEBHOOK_URL = os.getenv(
+    "DISCORD_WEBHOOK_URL"
+)
 
 if not DOWNLOADS_PATH:
     raise ValueError(
